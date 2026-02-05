@@ -1,0 +1,52 @@
+   
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+        body,html{width:100vw;height:100vh;overflow:hidden;background:#0f172a}
+        #root{width:100vw;height:100vh;overflow:hidden}
+        
+        .dashboard{width:100vw;height:100vh;display:flex;position:relative;background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.9)),url('F-Feeali-e1649901201166.jpg') center/cover fixed}
+        
+        .background-lines{position:absolute;width:100vw;height:100vh;pointer-events:none;z-index:1}
+        .line{position:absolute;background:rgba(255,255,255,0.05)}
+        .line-1{top:0;left:0;width:100vw;height:1px}
+        .line-2{top:33.33vh;left:0;width:100vw;height:1px}
+        .line-3{top:66.66vh;left:0;width:100vw;height:1px}
+        .line-4{top:100vh;left:0;width:100vw;height:1px}
+        .line-5{top:0;left:0;width:1px;height:100vh}
+        .line-6{top:0;left:33.33vw;width:1px;height:100vh}
+        .line-7{top:0;left:66.66vw;width:1px;height:100vh}
+        .line-8{top:0;left:100vw;width:1px;height:100vh}
+        
+        .stats-container{width:100vw;height:100vh;display:flex;position:relative;z-index:2}
+        
+        .stat-box{flex:1;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;border-right:1px solid rgba(255,255,255,0.05);transition:all 0.3s ease}
+        .stat-box:last-child{border-right:none}
+        .stat-box:hover{background:rgba(255,255,255,0.02)}
+        
+        .stat-content{text-align:center;padding:2vw;width:100%}
+        
+        .stat-label{font-size:2vw;font-weight:400;color:#cbd5e1;letter-spacing:0.2vw;margin-bottom:3vh;text-transform:uppercase}
+        
+        .stat-number{font-size:10vw;font-weight:800;color:#ffffff;line-height:1;margin:2vh 0;text-shadow:0 1vw 2vw rgba(0,0,0,0.5);font-family:'Inter',sans-serif}
+        
+        .stat-subtitle{font-size:1.2vw;font-weight:300;color:#94a3b8;margin-top:3vh;letter-spacing:0.1vw}
+        
+        .counter-animation{animation:countUp 1.5s ease-out forwards;opacity:0}
+        
+        .total-box{background:linear-gradient(135deg,rgba(79,70,229,0.1),transparent)}
+        .boys-box{background:linear-gradient(135deg,rgba(37,99,235,0.1),transparent)}
+        .girls-box{background:linear-gradient(135deg,rgba(219,39,119,0.1),transparent)}
+        
+        .loading{width:100vw;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#cbd5e1;font-size:2vw;position:absolute;z-index:3;background:rgba(15,23,42,0.9)}
+        .spinner{width:5vw;height:5vw;border:0.4vw solid rgba(255,255,255,0.1);border-top:0.4vw solid #4f46e5;border-radius:50%;margin-bottom:3vh;animation:spin 1s linear infinite}
+        
+        .error{width:100vw;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fca5a5;font-size:1.5vw;position:absolute;z-index:3;background:rgba(15,23,42,0.9)}
+        .error-title{font-size:3vw;font-weight:700;margin-bottom:2vh}
+        
+        @keyframes countUp{0%{opacity:0;transform:translateY(5vh) scale(0.9)}100%{opacity:1;transform:translateY(0) scale(1)}}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        
+        @media (max-width:768px){
+            .stat-label{font-size:3vw}
+            .stat-number{font-size:12vw}
+            .stat-subtitle{font-size:2vw}
+        }
